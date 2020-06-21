@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>it_codenames</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="static/analytics.js"></script><script async="" src="static/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-120990373-1');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/it_codenames_style.css">
+<script src="static/prompt.js"></script></head>
+<body data-gr-c-s-loaded="true">
+<div class="game-logo">
+    <h1 class="text-center">
+        <img src="static/green-heart.png" width="30px">
+        <span class="red">it</span><span class="blue">_codenames</span>
+    </h1>
+</div>
+<span id="game_id" class="red" hidden="true"> 177 </span>
+<ul class="nav justify-content-center main_nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="https://divergent-app.ru/it_codenames">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://divergent-app.ru/it_codenames/rules">Rules</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://divergent-app.ru/it_codenames/about">About</a>
+    </li>
+</ul>
+<div id="main_menu" class="container"><div class="row"><div class="col"><div id="menu"><div id="datasets"><div class="card my_card"><h2 class="my_title card-title">Teams</h2> <div class="card-body my_card_body"><div id="t1_div1" class="team_div"><h2><span class="color_t1">I: Alice Bob Charlie</span></h2> <input id="team1_name" type="text" value="Alice Bob Charlie" class="card-text"></div> <div id="t2_div1" class="team_div"><h2><span class="color_t2">II: Chuck Dave Eva</span></h2> <input id="team2_name" type="text" value="Chuck Dave Eva" class="card-text"></div></div></div> <div class="card my_card"><h2 class="my_title card-title">Datasets</h2> <div class="card-body my_card_body"><div class="datesets_item"><input id="words_maths" type="checkbox" value="words_maths" class="largercheckbox" checked="checked"> <label for="words_maths" class="check_label">Maths (188)</label></div> <div class="datesets_item"><input id="words_ml" type="checkbox" value="words_ml" class="largercheckbox"> <label for="words_ml" class="check_label">Machine Learning (890)</label></div> <div class="datesets_item"><input id="words_it" type="checkbox" value="words_it" class="largercheckbox" checked="checked"> <label for="words_it" class="check_label">IT (1098)</label></div> <div class="datesets_item"><input id="words_ods" type="checkbox" value="words_ods" class="largercheckbox"> <label for="words_ods" class="check_label">ODS (89)</label></div></div></div> <div class="card my_card"><div id="complexity"><h2 class="card-title">complexity</h2> <div class="card-body my_card_body"><input type="radio" id="one" value="easy" checked="checked" hidden="hidden"> <label role="button" for="one" class="btn btn_green btn_active">
+                                        easy
+                                    </label> <input type="radio" id="two" value="hard" hidden="hidden"> <label role="button" for="two" class="btn btn_green btn_noactive">
+                                        hard
+                                    </label></div></div> <button id="start_btn" onclick="start_game()" type="button" class="btn btn-success">start</button></div></div></div></div> <div class="col-8"><div id="game_prev_img" class="card my_card"><h2 class="card-title">Preview</h2> <img src="static/words_it.png" class="card-img-top"></div> <div id="game_start_div" class="mb-3 card my_card" hidden="hidden"><h2 class="card-title my_title">Send urls for teammates</h2> <div id="captain_id" hidden="hidden">9469</div> <ul class="list-group list-group-flush"><li class="list-group-item"><div class="card"><h4 class="card-title my_title">&nbsp;Captains</h4> <div class="card-body"><div class="input-group mb-3"><input id="captain_url" type="text" aria-label="Recipient's username" aria-describedby="basic-addon2" target="_blank" class="form-control" value="https://divergent-app.ru/it_codenames/9469/captains"> <div class="input-group-append"><button type="button" onclick="copyCaptainUrl()" class="btn btn-outline-secondary copy_btn">copy
+                                    </button> <a href="https://divergent-app.ru/it_codenames/9469/captains" role="button" target="_blank" class="btn btn-outline-secondary open_btn">open</a></div></div></div></div></li> <li class="list-group-item"><div class="card"><h4 class="card-title  my_title">&nbsp;Players</h4> <div class="card-body"><div class="input-group mb-3"><input id="player_url" type="text" aria-label="Recipient's username" aria-describedby="basic-addon2" target="_blank" class="form-control" value="https://divergent-app.ru/it_codenames/177/players"> <div class="input-group-append"><button type="button" onclick="copyPlayerUrl()" class="btn btn-outline-secondary copy_btn">copy
+                                        </button> <a href="https://divergent-app.ru/it_codenames/177/players" target="_blank" role="button" class="btn btn-outline-secondary open_btn">open</a></div></div></div></div></li></ul></div></div></div></div>
+<script src="static/it_codenames_main.js"></script>
+
+</body></html>
