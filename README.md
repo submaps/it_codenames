@@ -4,3 +4,6 @@ Codenames boardgame with IT and ML terms. Deployed at https://divergent-app.ru/i
 * it_codenames_players.html board for players
 * it_codenames_captains.html board for captains
 * `static` folder with all static stuff
+
+
+![](https://github.com/submaps/it_codenames/blob/master/static/screen.jpeg)
